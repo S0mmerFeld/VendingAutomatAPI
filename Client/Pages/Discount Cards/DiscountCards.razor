@@ -1,0 +1,97 @@
+﻿@page "/DiscountCards"
+@using Blazor.Client.Services.Interfaces
+@using Blazor.Client.BlazorDTOs
+@inject HttpClient Http
+@inject IBlazorDiscountCardsService BlazorDiscountCardsService
+@inject NavigationManager NavigationManager
+
+
+
+<MudGrid>
+    <MudItem xs="6" sm="1">
+    </MudItem>
+    <MudItem xs="6" sm="3">
+    </MudItem>
+    <MudItem xs="6" sm="6">
+        <h1>DiscountCards</h1>
+    </MudItem>
+    <MudItem xs="6" sm="1">
+    </MudItem>
+    <MudItem xs="6" sm="1">
+        <MudIconButton Icon="@Icons.Material.Filled.AddCircle" Color="Color.Error" Title="Add" @onclick="@CreateDiscountCard" Size="Size.Large" />
+    </MudItem>
+
+</MudGrid>
+
+
+@if (discountCards == null)
+{
+<MudProgressCircular Color="Color.Default" Style="height:70px;width:70px;" Indeterminate="true" />
+ }
+
+
+else
+{
+<MudTable Items="@discountCards" Hover="true" Filter="new Func<BlazorDiscountCardDTO,bool>(FilterFunc1)">
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">List of Discount Cards</MudText>
+        <MudSpacer />
+        <MudTextField @bind-Value="@searchString1" Placeholder="Search" Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+    </ToolBarContent>
+
+    <HeaderContent>
+        <MudTh>Id</MudTh>
+        <MudTh>PurchaseSum</MudTh>
+        <MudTh>Discount</MudTh>
+    </HeaderContent>
+
+    <RowTemplate>
+        <MudTd DataLabel="Id">@context.Id</MudTd>
+        <MudTd DataLabel="PurchaseSum"  @onclick="@(() => ShowDiscountCard(@context.Id))"><u>@context.PurchaseSum</u></MudTd>
+        <MudTd DataLabel="Discount">@context.Discount</MudTd>
+
+
+    </RowTemplate>
+</MudTable>               
+}
+
+
+
+
+@code { private IEnumerable<BlazorDiscountCardDTO> discountCards = new List<BlazorDiscountCardDTO>();
+
+
+    private string searchString1 = "";    
+
+
+    private bool FilterFunc1(BlazorDiscountCardDTO element) => FilterFunc(element, searchString1);
+
+    private bool FilterFunc(BlazorDiscountCardDTO element, string searchString)
+    {
+        if (string.IsNullOrWhiteSpace(searchString))
+            return true;
+        if (element.Discount.ToString().Contains(searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+        if (element.PurchaseSum.ToString().Contains(searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+        if ($"{element.Discount} {element.PurchaseSum}".Contains(searchString))
+            return true;
+        return false;
+
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        discountCards = await BlazorDiscountCardsService.GetDiscountCards();
+    }
+
+
+    void ShowDiscountCard(int id)
+    {
+        NavigationManager.NavigateTo($"/discountCard/{id}");
+    }
+
+    void CreateDiscountCard()
+    {
+        NavigationManager.NavigateTo("/creatediscountCard");
+    } }

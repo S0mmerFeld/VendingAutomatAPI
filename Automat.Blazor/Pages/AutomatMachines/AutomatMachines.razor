@@ -1,0 +1,44 @@
+﻿@page "/automatMachines"
+@using Automat.Blazor.Services.Interfaces
+@using Automat.Blazor.BlazorDTOs
+@inject IBlazorAutomatMachineService BlazorAutomatMachineService
+
+<h3>AutomatMachines</h3>
+
+@if (automatMachines == null)
+{
+<span><em>Loading...</em></span> }
+            else
+            {
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>InventoryId</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>MaxProductNum</th>
+            <th>CurrentProdNumber</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var automatMachine in automatMachines)
+        {
+        <tr>
+            <td>@automatMachine.Id</td>
+            <td>@automatMachine.InventoryId</td>
+            <td>@automatMachine.Name</td>
+            <td>@automatMachine.Address</td>
+            <td>@automatMachine.MaxProductNum</td>
+            <td>@automatMachine.CurrentProdNumber</td>
+        </tr>}
+
+    </tbody>
+</table>}
+
+
+@code { private IEnumerable<BlazorAutomatMachineDTO> automatMachines = new List<BlazorAutomatMachineDTO>();
+    protected override async Task OnInitializedAsync()
+    {
+        automatMachines = await BlazorAutomatMachineService.GetAutomatMachines();
+    } }

@@ -1,0 +1,7 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\Users\Олег\Downloads\AutomatWebAPI-master\AutomatWebAPI-master\Automat.Client\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\Олег\Downloads\AutomatWebAPI-master\AutomatWebAPI-master\Automat.Client\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/MudBlazor" Path="C:\Users\Олег\.nuget\packages\mudblazor\5.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/MudBlazor.Markdown" Path="C:\Users\Олег\.nuget\packages\mudblazor.markdown\0.0.5\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/MudBlazor.ThemeManager" Path="C:\Users\Олег\.nuget\packages\mudblazor.thememanager\1.0.5\build\..\staticwebassets\" />
+</StaticWebAssets>

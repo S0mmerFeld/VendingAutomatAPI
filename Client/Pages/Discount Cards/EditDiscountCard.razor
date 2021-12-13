@@ -1,0 +1,49 @@
+﻿@page "/editDiscountCard/{id:int}"
+@using Blazor.Client.Services.Interfaces
+@using Blazor.Client.BlazorDTOs
+@inject HttpClient Http
+@inject IBlazorDiscountCardsService BlazorDiscountCardsService
+@inject NavigationManager NavigationManager
+
+<h3>EditDiscountCard</h3>
+
+<EditForm Model="@DiscountCard" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+
+    <div class="form-group">
+        <label for="Name" class="form-label">PurchaseSum</label>
+        <InputNumber @bind-Value="@DiscountCard.PurchaseSum" class="form-control" />
+        <ValidationMessage For="@(()=>DiscountCard.PurchaseSum)"></ValidationMessage>
+    </div>
+
+    <div class="form-group">
+        <label for="Address" class="form-label">Discount</label>
+        <InputNumber @bind-Value="@DiscountCard.Discount" class="form-control" />
+        <ValidationMessage For="@(()=>DiscountCard.Discount)"></ValidationMessage>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</EditForm>
+
+
+
+
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    BlazorDiscountCardDTO DiscountCard = new BlazorDiscountCardDTO();
+
+    async Task HandleValidSubmit()
+    {
+        var result = await BlazorDiscountCardsService.UpdateDiscountCard(Id, DiscountCard);
+        if (result) NavigationManager.NavigateTo($"/DiscountCard/{Id}");
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        DiscountCard = await BlazorDiscountCardsService.GetDiscountCardById(Id);
+    }
+
+
+}

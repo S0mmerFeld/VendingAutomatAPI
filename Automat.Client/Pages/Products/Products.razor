@@ -1,0 +1,76 @@
+﻿@page "/Products"
+@using Automat.Client.Services.Interfaces
+@using Automat.Client.BlazorDTOs
+@inject HttpClient Http
+@inject IBlazorProductsService BlazorProductsService
+@inject NavigationManager NavigationManager
+
+<h3>Products</h3>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (products == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <button class="btn btn-danger" @onclick="@CreateProduct">Add Product</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Location</th>
+                <th>ShortDescription</th>
+                <th>Sells</th>
+                <th>CurrentQuantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in products)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>
+                        <button class="btn btn-link" @onclick="@(() => ShowProduct(product.Id))">
+                            @product.Name
+                        </button>
+                    </td>
+                    <td>@product.Price</td>
+                    <td>@product.Location</td>
+                    <td>@product.ShortDescription</td>
+                    <td>@product.Sells</td>
+                    <td>@product.CurrentQuantity</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+
+@code {
+
+
+
+    private IEnumerable<BlazorProductDTO> products = new List<BlazorProductDTO>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        products = await BlazorProductsService.GetProducts();
+    }
+
+
+    void ShowProduct(int id)
+    {
+        NavigationManager.NavigateTo($"/Product/{id}");
+    }
+
+    void CreateProduct()
+    {
+        NavigationManager.NavigateTo("/createProduct");
+    }
+
+}

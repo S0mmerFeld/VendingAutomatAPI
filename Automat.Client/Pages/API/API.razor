@@ -1,0 +1,74 @@
+﻿@page "/API"
+@using Automat.Client.Services.Interfaces
+@using Automat.Client.BlazorDTOs
+@inject HttpClient Http
+@inject IBlazorCompositionService BlazorCompositionService
+@inject NavigationManager NavigationManager
+
+<h1>Composition</h1>
+
+
+
+
+<MudItem xs="12" sm="6" md="4">
+    <MudTextField @bind-Value="query" Label="Enter product weight and name" Variant="Variant.Outlined"></MudTextField>
+</MudItem>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Serving Size</th>
+            <th>Total Fat</th>
+            <th>Saturated Fat</th>
+            <th>Cholesterol</th>
+            <th>Sugar</th>
+            <th>Protein</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (composition == null)
+        {
+
+        }
+        else
+        {
+            @foreach (var comp in composition)
+            {
+            <tr>
+                <td>@comp.name</td>
+                <td>@comp.serving_size_g</td>
+                <td>@comp.fat_total_g</td>
+                <td>@comp.fat_saturated_g</td>
+                <td>@comp.cholesterol_mg</td>
+                <td>@comp.sugar_g</td>
+                <td>@comp.protein_g</td>
+            </tr>
+            }
+        }
+
+
+    </tbody>
+</table>
+
+<button class="btn btn-success" @onclick="@(()=>GetNutrition())">GetNutrition</button>
+
+
+@code
+    {
+   
+    private IEnumerable<BlazorApiCompositionDTO> composition = new List<BlazorApiCompositionDTO>();
+
+    private string query = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+    }
+
+    async void GetNutrition()
+    {
+        composition = await BlazorCompositionService.GetInformationByName(query);
+    }
+
+}

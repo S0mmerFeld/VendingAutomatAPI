@@ -1,0 +1,67 @@
+﻿@page "/createproduct"
+@using Blazor.Client.Services.Interfaces
+@using Blazor.Client.BlazorDTOs
+@inject HttpClient Http
+@inject IBlazorProductsService BlazorProductsService
+@inject NavigationManager NavigationManager
+
+<h3>CreateProduct</h3>
+
+<EditForm Model="@product" OnValidSubmit="@HandleValidSubmit">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+
+    <div class="form-group">
+        <label for="Name" class="form-label">Name</label>
+        <InputText Name="Name" @bind-Value="@product.Name" class="form-control"></InputText>
+        <ValidationMessage For="@(()=>product.Name)"></ValidationMessage>
+    </div>
+
+    <div class="form-group">
+        <label for="Price" class="form-label">Price</label>
+        <InputNumber @bind-Value="@product.Price" class="form-control" />
+        <ValidationMessage For="@(()=>product.Price)"></ValidationMessage>
+    </div>
+
+    <div class="form-group">
+        <label for="Location" class="form-label">Location</label>
+        <InputText Name="Address" @bind-Value="@product.Location" class="form-control"></InputText>
+        <ValidationMessage For="@(()=>product.Location)"></ValidationMessage>
+    </div>
+
+    <div class="form-group">
+        <label for="ShortDescription" class="form-label">ShortDescription</label>
+        <InputText Name="ShortDescription" @bind-Value="@product.ShortDescription" class="form-control"></InputText>
+        <ValidationMessage For="@(()=>product.ShortDescription)"></ValidationMessage>
+    </div>
+
+    <div class="form-group">
+        <label for="Sells" class="form-label">Sells</label>
+        <InputNumber @bind-Value="@product.Sells" class="form-control" />
+        <ValidationMessage For="@(()=>product.Sells)"></ValidationMessage>
+    </div>
+
+    <div class="form-group">
+        <label for="CurrentQuantity" class="form-label">CurrentQuantity</label>
+        <InputNumber @bind-Value="@product.CurrentQuantity" class="form-control" />
+        <ValidationMessage For="@(()=>product.CurrentQuantity)"></ValidationMessage>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</EditForm>
+
+
+
+@code {
+
+    BlazorProductDTO product = new BlazorProductDTO();
+
+    async Task HandleValidSubmit()
+    {
+        var result = await BlazorProductsService.CreateProduct(product);
+        if (result)
+        {
+            NavigationManager.NavigateTo("/products");
+        }
+    }
+
+
+}

@@ -1,0 +1,85 @@
+﻿@page "/API"
+@using Blazor.Client.Services.Interfaces
+@using Blazor.Client.BlazorDTOs
+@inject HttpClient Http
+@inject IBlazorCompositionService BlazorCompositionService
+@inject NavigationManager NavigationManager
+
+
+<MudGrid>
+    <MudItem xs="6" sm="1">
+    </MudItem>
+    <MudItem xs="6" sm="3">
+    </MudItem>
+    <MudItem xs="6" sm="5">
+        <h1>Composition</h1>
+    </MudItem>     
+
+</MudGrid>
+
+<MudGrid>
+    <MudItem xs="12" sm="1">
+    </MudItem>
+    <MudItem xs="12" sm="1" md="6">
+        <MudTextField @bind-Value="@query" Label="Enter product weight and name" Variant="Variant.Outlined"></MudTextField>
+    </MudItem>  
+    <MudItem xs="12" sm="1">
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="@(()=>GetNutrition())">Get Information</MudButton>
+    </MudItem>
+</MudGrid>
+
+
+
+    <MudTable Items="@composition" Hover="true">
+        <ToolBarContent>
+            <MudText Typo="Typo.h6">Product compound</MudText>
+            <MudSpacer />            
+        </ToolBarContent>
+
+        <HeaderContent>
+            <MudTh>Name</MudTh>
+            <MudTh>Serving Size</MudTh>
+            <MudTh>Total Fat</MudTh>
+            <MudTh>Saturated Fat</MudTh>
+            <MudTh>Cholesterol</MudTh>
+            <MudTh>Sugar</MudTh>
+            <MudTh>Protein</MudTh>
+        </HeaderContent>
+
+        <RowTemplate>
+            <MudTd DataLabel="Name">@context.name</MudTd>
+            <MudTd DataLabel="Serving Size">@context.serving_size_g</MudTd>
+            <MudTd DataLabel="Total Fat">@context.fat_total_g.</MudTd>
+            <MudTd DataLabel="Saturated Fat">@context.fat_saturated_g</MudTd>
+            <MudTd DataLabel="Cholesterol">@context.cholesterol_mg</MudTd>
+            <MudTd DataLabel="Sugar">@context.sugar_g</MudTd>
+            <MudTd DataLabel="Protein">@context.protein_g</MudTd>
+        </RowTemplate>
+    </MudTable>                 
+
+
+
+
+@code
+    { private IEnumerable<BlazorApiCompositionDTO> composition = new List<BlazorApiCompositionDTO>();
+
+    private string query = null;
+    int k = 0;
+    protected override async Task OnInitializedAsync()
+    {
+
+    }
+
+
+
+    async void GetNutrition()
+    {
+
+        if (query != null)
+        {         
+            composition = await BlazorCompositionService.GetInformationByName(query);
+            StateHasChanged();
+        }
+    }
+
+}

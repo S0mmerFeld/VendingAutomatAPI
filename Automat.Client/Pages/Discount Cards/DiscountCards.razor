@@ -1,0 +1,69 @@
+﻿@page "/DiscountCards"
+@using Automat.Client.Services.Interfaces
+@using Automat.Client.BlazorDTOs
+@inject HttpClient Http
+@inject IBlazorDiscountCardsService BlazorDiscountCardsService
+@inject NavigationManager NavigationManager
+
+<h3>DiscountCards</h3>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (discountCards == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <button class="btn btn-danger" @onclick="@CreateDiscountCard">Add Discount Card</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>PurchaseSum</th>
+                <th>Discount</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var discountCard in discountCards)
+            {
+            <tr>
+                <td>@discountCard.Id</td>
+                <td>
+                    <button class="btn btn-link" @onclick="@(()=>ShowDiscountCard(discountCard.Id))">
+                        @discountCard.PurchaseSum
+                    </button>
+                </td>
+                <td>@discountCard.Discount</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+
+
+@code {
+
+
+
+    private IEnumerable<BlazorDiscountCardDTO> discountCards = new List<BlazorDiscountCardDTO>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        discountCards = await BlazorDiscountCardsService.GetDiscountCards();
+    }
+
+
+    void ShowDiscountCard(int id)
+    {
+        NavigationManager.NavigateTo($"/discountCard/{id}");
+    }
+
+    void CreateDiscountCard()
+    {
+        NavigationManager.NavigateTo("/creatediscountCard");
+    }
+
+}

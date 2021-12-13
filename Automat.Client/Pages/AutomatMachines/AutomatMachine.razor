@@ -1,0 +1,81 @@
+﻿@page "/AutomatMachine/{id:int}"
+@using Automat.Client.Services.Interfaces
+@using Automat.Client.BlazorDTOs
+@inject HttpClient Http
+@inject IBlazorAutomatMachineService BlazorAutomatMachineService
+@inject IBlazorSoldsService BlazorSoldsService
+@inject NavigationManager NavigationManager
+
+<h3>AutomatMachine</h3>
+
+@if (Automat == null)
+{
+<span><em>Loading...</em></span> }
+
+else
+{
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>InventoryId</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>MaxProductNum</th>
+            <th>CurrentProdNumber</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+            <td>@Automat.Id</td>
+            <td>@Automat.InventoryId</td>
+            <td>@Automat.Name</td>
+            <td>@Automat.Address</td>
+            <td>@Automat.MaxProductNum</td>
+            <td>@Automat.CurrentProdNumber</td>
+        </tr>
+    </tbody>
+</table>
+
+
+    
+    <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Edit" Color="Color.Primary"  @onclick="@(()=>EditAutomatMachine(Automat.Id))">Edit</MudButton>
+    <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Delete" Color="Color.Error" @onclick="@(()=> DeleteAutomatMachine(Automat.Id))">Delete</MudButton>
+   
+
+    }
+
+
+
+    @code
+{ [Parameter]
+        public int Id { get; set; }
+
+        BlazorAutomatMachineDTO Automat;
+        //ClientDTO carOwner;
+
+        protected override async Task OnInitializedAsync()
+    {
+        Automat = await BlazorAutomatMachineService.GetAutomatMachineById(Id);
+        //if (AutomatMachine.ClientId.HasValue) carOwner = await BlazorAutomatMachineService.GetClientById(car.ClientId.GetValueOrDefault());
+    }
+
+    void EditAutomatMachine(int id)
+    {
+        NavigationManager.NavigateTo($"/editAutomatMachine/{id}");
+    }
+
+    async Task DeleteAutomatMachine(int id)
+    {
+        var result = await BlazorAutomatMachineService.DeleteAutomatMachine(id);
+        if (result) NavigationManager.NavigateTo($"/AutomatMachines");
+    }
+
+    void ShowClient(int? id)
+    {
+        NavigationManager.NavigateTo($"/Automatmachine/{id}");
+    } 
+        
+        }

@@ -60,46 +60,46 @@ namespace Automat.DAL.Migrations
                         {
                             Id = 1,
                             Address = "Address1",
-                            CurrentProdNumber = 1,
-                            InventoryId = 1,
-                            MaxProductNum = 1,
-                            Name = "Name1"
+                            CurrentProdNumber = 30,
+                            InventoryId = 10000001,
+                            MaxProductNum = 100,
+                            Name = "Автомат воды"
                         },
                         new
                         {
                             Id = 2,
                             Address = "Address2",
-                            CurrentProdNumber = 2,
-                            InventoryId = 2,
-                            MaxProductNum = 2,
-                            Name = "Name2"
+                            CurrentProdNumber = 44,
+                            InventoryId = 10000002,
+                            MaxProductNum = 56,
+                            Name = "Автомат снеков"
                         },
                         new
                         {
                             Id = 3,
                             Address = "Address3",
-                            CurrentProdNumber = 3,
-                            InventoryId = 3,
-                            MaxProductNum = 3,
-                            Name = "Name3"
+                            CurrentProdNumber = 33,
+                            InventoryId = 10000003,
+                            MaxProductNum = 60,
+                            Name = "Автомат сувениров"
                         },
                         new
                         {
                             Id = 4,
                             Address = "Address4",
                             CurrentProdNumber = 4,
-                            InventoryId = 4,
-                            MaxProductNum = 4,
-                            Name = "Name4"
+                            InventoryId = 10000004,
+                            MaxProductNum = 10,
+                            Name = "Автомат пива"
                         },
                         new
                         {
                             Id = 5,
                             Address = "Address5",
-                            CurrentProdNumber = 5,
-                            InventoryId = 5,
-                            MaxProductNum = 5,
-                            Name = "Name5"
+                            CurrentProdNumber = 11,
+                            InventoryId = 10000005,
+                            MaxProductNum = 20,
+                            Name = "Автомат пива"
                         });
                 });
 
@@ -129,32 +129,32 @@ namespace Automat.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            Discount = 1,
-                            PurchaseSum = 1f
+                            Discount = 6,
+                            PurchaseSum = 1560f
                         },
                         new
                         {
                             Id = 2,
-                            Discount = 2,
-                            PurchaseSum = 2f
+                            Discount = 10,
+                            PurchaseSum = 20000f
                         },
                         new
                         {
                             Id = 3,
-                            Discount = 3,
-                            PurchaseSum = 3f
+                            Discount = 8,
+                            PurchaseSum = 10000f
                         },
                         new
                         {
                             Id = 4,
-                            Discount = 4,
-                            PurchaseSum = 4f
+                            Discount = 7,
+                            PurchaseSum = 5005f
                         },
                         new
                         {
                             Id = 5,
-                            Discount = 5,
-                            PurchaseSum = 5f
+                            Discount = 3,
+                            PurchaseSum = 100f
                         });
                 });
 
@@ -216,10 +216,10 @@ namespace Automat.DAL.Migrations
                             Description = "Газ",
                             Location = "Караван",
                             Name = "Вода",
-                            Price = 1m,
+                            Price = 10m,
                             PriceString = "1.00",
                             Sells = 10,
-                            ShortDescription = "SD"
+                            ShortDescription = "Бонаква"
                         },
                         new
                         {
@@ -228,10 +228,10 @@ namespace Automat.DAL.Migrations
                             Description = "СО2",
                             Location = "Дафи",
                             Name = "Кола",
-                            Price = 2m,
+                            Price = 20m,
                             PriceString = "2.00",
                             Sells = 13,
-                            ShortDescription = "SD"
+                            ShortDescription = "2 литра"
                         },
                         new
                         {
@@ -240,10 +240,10 @@ namespace Automat.DAL.Migrations
                             Description = "Бутерброд",
                             Location = "Аве Плаза",
                             Name = "Снек",
-                            Price = 3m,
+                            Price = 35m,
                             PriceString = "3.00",
                             Sells = 30,
-                            ShortDescription = "SD"
+                            ShortDescription = "Бутерброд"
                         },
                         new
                         {
@@ -252,10 +252,10 @@ namespace Automat.DAL.Migrations
                             Description = "Арабика",
                             Location = "АТБ",
                             Name = "Кофе",
-                            Price = 4m,
+                            Price = 40m,
                             PriceString = "4.00",
                             Sells = 20,
-                            ShortDescription = "SD"
+                            ShortDescription = "100г Якобс"
                         },
                         new
                         {
@@ -267,7 +267,7 @@ namespace Automat.DAL.Migrations
                             Price = 5m,
                             PriceString = "5.00",
                             Sells = 11,
-                            ShortDescription = "SD"
+                            ShortDescription = "lays сыр"
                         });
                 });
 
@@ -350,32 +350,32 @@ namespace Automat.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            Name = "Name1",
-                            Surname = "Surname1"
+                            Name = "Олег",
+                            Surname = "Евсеенко"
                         },
                         new
                         {
                             Id = 2,
-                            Name = "Name2",
-                            Surname = "Surname2"
+                            Name = "Никита",
+                            Surname = "Лебедев"
                         },
                         new
                         {
                             Id = 3,
-                            Name = "Name3",
-                            Surname = "Surname3"
+                            Name = "Андрей",
+                            Surname = "Воронин"
                         },
                         new
                         {
                             Id = 4,
-                            Name = "Name4",
-                            Surname = "Surname4"
+                            Name = "Павел",
+                            Surname = "Никифоров"
                         },
                         new
                         {
                             Id = 5,
-                            Name = "Name5",
-                            Surname = "Surname5"
+                            Name = "Сергей",
+                            Surname = "Иванчук"
                         });
                 });
 

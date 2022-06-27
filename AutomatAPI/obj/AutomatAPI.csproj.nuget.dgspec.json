@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\!!!!!\\AutomatAPI\\AutomatAPI.csproj": {}
+    "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI\\AutomatAPI.csproj": {}
   },
   "projects": {
-    "D:\\!!!!!\\AutomatAPI.BLL\\Automat.BLL.csproj": {
+    "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.BLL\\Automat.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\!!!!!\\AutomatAPI.BLL\\Automat.BLL.csproj",
+        "projectUniqueName": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.BLL\\Automat.BLL.csproj",
         "projectName": "Automat.BLL",
-        "projectPath": "D:\\!!!!!\\AutomatAPI.BLL\\Automat.BLL.csproj",
-        "packagesPath": "C:\\Users\\Олег\\.nuget\\packages\\",
-        "outputPath": "D:\\!!!!!\\AutomatAPI.BLL\\obj\\",
+        "projectPath": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.BLL\\Automat.BLL.csproj",
+        "packagesPath": "C:\\Users\\Oleg\\.nuget\\packages\\",
+        "outputPath": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Олег\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Oleg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -34,11 +32,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\!!!!!\\AutomatAPI.DAL\\Automat.DAL.csproj": {
-                "projectPath": "D:\\!!!!!\\AutomatAPI.DAL\\Automat.DAL.csproj"
+              "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.DAL\\Automat.DAL.csproj": {
+                "projectPath": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.DAL\\Automat.DAL.csproj"
               },
-              "D:\\!!!!!\\AutomatAPI.Models\\Automat.Models.csproj": {
-                "projectPath": "D:\\!!!!!\\AutomatAPI.Models\\Automat.Models.csproj"
+              "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.Models\\Automat.Models.csproj": {
+                "projectPath": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.Models\\Automat.Models.csproj"
               }
             }
           }
@@ -81,28 +79,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\!!!!!\\AutomatAPI.DAL\\Automat.DAL.csproj": {
+    "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.DAL\\Automat.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\!!!!!\\AutomatAPI.DAL\\Automat.DAL.csproj",
+        "projectUniqueName": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.DAL\\Automat.DAL.csproj",
         "projectName": "Automat.DAL",
-        "projectPath": "D:\\!!!!!\\AutomatAPI.DAL\\Automat.DAL.csproj",
-        "packagesPath": "C:\\Users\\Олег\\.nuget\\packages\\",
-        "outputPath": "D:\\!!!!!\\AutomatAPI.DAL\\obj\\",
+        "projectPath": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.DAL\\Automat.DAL.csproj",
+        "packagesPath": "C:\\Users\\Oleg\\.nuget\\packages\\",
+        "outputPath": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Олег\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Oleg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -115,8 +111,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\!!!!!\\AutomatAPI.Models\\Automat.Models.csproj": {
-                "projectPath": "D:\\!!!!!\\AutomatAPI.Models\\Automat.Models.csproj"
+              "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.Models\\Automat.Models.csproj": {
+                "projectPath": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.Models\\Automat.Models.csproj"
               }
             }
           }
@@ -163,28 +159,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\!!!!!\\AutomatAPI.Models\\Automat.Models.csproj": {
+    "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.Models\\Automat.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\!!!!!\\AutomatAPI.Models\\Automat.Models.csproj",
+        "projectUniqueName": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.Models\\Automat.Models.csproj",
         "projectName": "Automat.Models",
-        "projectPath": "D:\\!!!!!\\AutomatAPI.Models\\Automat.Models.csproj",
-        "packagesPath": "C:\\Users\\Олег\\.nuget\\packages\\",
-        "outputPath": "D:\\!!!!!\\AutomatAPI.Models\\obj\\",
+        "projectPath": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.Models\\Automat.Models.csproj",
+        "packagesPath": "C:\\Users\\Oleg\\.nuget\\packages\\",
+        "outputPath": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Олег\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Oleg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -237,28 +231,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\!!!!!\\AutomatAPI\\AutomatAPI.csproj": {
+    "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI\\AutomatAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\!!!!!\\AutomatAPI\\AutomatAPI.csproj",
+        "projectUniqueName": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI\\AutomatAPI.csproj",
         "projectName": "AutomatAPI",
-        "projectPath": "D:\\!!!!!\\AutomatAPI\\AutomatAPI.csproj",
-        "packagesPath": "C:\\Users\\Олег\\.nuget\\packages\\",
-        "outputPath": "D:\\!!!!!\\AutomatAPI\\obj\\",
+        "projectPath": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI\\AutomatAPI.csproj",
+        "packagesPath": "C:\\Users\\Oleg\\.nuget\\packages\\",
+        "outputPath": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Олег\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Oleg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -271,14 +263,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\!!!!!\\AutomatAPI.BLL\\Automat.BLL.csproj": {
-                "projectPath": "D:\\!!!!!\\AutomatAPI.BLL\\Automat.BLL.csproj"
+              "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.BLL\\Automat.BLL.csproj": {
+                "projectPath": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.BLL\\Automat.BLL.csproj"
               },
-              "D:\\!!!!!\\AutomatAPI.DAL\\Automat.DAL.csproj": {
-                "projectPath": "D:\\!!!!!\\AutomatAPI.DAL\\Automat.DAL.csproj"
+              "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.DAL\\Automat.DAL.csproj": {
+                "projectPath": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.DAL\\Automat.DAL.csproj"
               },
-              "D:\\!!!!!\\AutomatAPI.Models\\Automat.Models.csproj": {
-                "projectPath": "D:\\!!!!!\\AutomatAPI.Models\\Automat.Models.csproj"
+              "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.Models\\Automat.Models.csproj": {
+                "projectPath": "E:\\Users\\Oleg\\Source\\Repos\\VendingAutomatAPI\\AutomatAPI.Models\\Automat.Models.csproj"
               }
             }
           }
@@ -362,7 +354,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }

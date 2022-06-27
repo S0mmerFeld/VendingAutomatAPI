@@ -21,3 +21,15 @@ D:\!!!!!\AutomatAPI.Models\obj\Debug\net5.0\Automat.Models.csproj.CoreCompileInp
 D:\!!!!!\AutomatAPI.Models\obj\Debug\net5.0\Automat.Models.dll
 D:\!!!!!\AutomatAPI.Models\obj\Debug\net5.0\ref\Automat.Models.dll
 D:\!!!!!\AutomatAPI.Models\obj\Debug\net5.0\Automat.Models.pdb
+E:\Users\Oleg\Source\Repos\VendingAutomatAPI\AutomatAPI.Models\bin\Debug\net5.0\Automat.Models.deps.json
+E:\Users\Oleg\Source\Repos\VendingAutomatAPI\AutomatAPI.Models\bin\Debug\net5.0\Automat.Models.dll
+E:\Users\Oleg\Source\Repos\VendingAutomatAPI\AutomatAPI.Models\bin\Debug\net5.0\ref\Automat.Models.dll
+E:\Users\Oleg\Source\Repos\VendingAutomatAPI\AutomatAPI.Models\bin\Debug\net5.0\Automat.Models.pdb
+E:\Users\Oleg\Source\Repos\VendingAutomatAPI\AutomatAPI.Models\obj\Debug\net5.0\Automat.Models.csproj.AssemblyReference.cache
+E:\Users\Oleg\Source\Repos\VendingAutomatAPI\AutomatAPI.Models\obj\Debug\net5.0\Automat.Models.GeneratedMSBuildEditorConfig.editorconfig
+E:\Users\Oleg\Source\Repos\VendingAutomatAPI\AutomatAPI.Models\obj\Debug\net5.0\Automat.Models.AssemblyInfoInputs.cache
+E:\Users\Oleg\Source\Repos\VendingAutomatAPI\AutomatAPI.Models\obj\Debug\net5.0\Automat.Models.AssemblyInfo.cs
+E:\Users\Oleg\Source\Repos\VendingAutomatAPI\AutomatAPI.Models\obj\Debug\net5.0\Automat.Models.csproj.CoreCompileInputs.cache
+E:\Users\Oleg\Source\Repos\VendingAutomatAPI\AutomatAPI.Models\obj\Debug\net5.0\Automat.Models.dll
+E:\Users\Oleg\Source\Repos\VendingAutomatAPI\AutomatAPI.Models\obj\Debug\net5.0\ref\Automat.Models.dll
+E:\Users\Oleg\Source\Repos\VendingAutomatAPI\AutomatAPI.Models\obj\Debug\net5.0\Automat.Models.pdb
